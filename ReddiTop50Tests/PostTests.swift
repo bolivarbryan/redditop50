@@ -10,21 +10,21 @@ import XCTest
 @testable import ReddiTop50
 
 class PostTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
+   let user = User(name: "bryan")
+   let title = "Ned Stark is alive"
+   let postID = "abcdx"
+   let entryDate = Date(timeIntervalSince1970: 100)
+
+   override func setUp() {
+      super.setUp()
+   }
+
+   override func tearDown() {
+      super.tearDown()
+   }
 
    func testInit_ShouldHaveAnIDTitleAuthorEntryAndComments() {
       //given
-      let user = User(name: "bryan")
-      let title = "Ned Stark is alive"
-      let entryDate = Date(timeIntervalSince1970: 100)
-      let postID = "abcdx"
 
       //when
       let post = Post(user: user, title: title, entryDate: entryDate, id: postID)
@@ -38,10 +38,7 @@ class PostTests: XCTestCase {
 
    func testImageURL_IsValid() {
       //given
-      let user = User(name: "bryan")
-      let title = "Ned Stark is alive"
-      let entryDate = Date(timeIntervalSince1970: 100)
-      let postID = "abcdx"
+
       let post = Post(user: user, title: title, entryDate: entryDate, id: postID)
 
       //when
@@ -55,10 +52,6 @@ class PostTests: XCTestCase {
 
    func testComments_ShouldHaveOne()  {
       //given
-      let user = User(name: "bryan")
-      let title = "Ned Stark is alive"
-      let entryDate = Date(timeIntervalSince1970: 100)
-      let postID = "abcdx"
       let post = Post(user: user, title: title, entryDate: entryDate, id: postID)
 
       //when
@@ -68,4 +61,31 @@ class PostTests: XCTestCase {
       //then
       XCTAssertEqual(post.comments.count, 1)
    }
+
+   func testViewModel_ShouldHaveAListOfPosts() {
+      //given
+      let post = Post(user: user, title: title, entryDate: entryDate, id: postID)
+      post.id = "abc"
+
+      //when
+      let post2 = Post(user: user, title: "another title", entryDate: Date(), id: "abc")
+      let postListViewModel = PostListViewModel(posts: [post])
+      let postViewModel = PostViewModel(post: post2)
+
+      //then
+      XCTAssertEqual(postListViewModel.postAtIndex(index: 0), postViewModel, "Posts doesn't match")
+   }
+
+   func testViewModel_ShouldReturnNumberOfPosts() {
+      //given
+      let post = Post(user: user, title: title, entryDate: entryDate, id: postID)
+      post.id = "abc"
+
+      //when
+      let postListViewModel = PostListViewModel(posts: [post])
+
+      //then
+      XCTAssertEqual(postListViewModel.numberOfPosts, 1)
+   }
+   
 }
