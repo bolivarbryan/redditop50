@@ -8,12 +8,13 @@
 
 import Foundation
 
-struct Post {
+class Post {
    let user: User
    let title: String
    let entryDate: Date
    let id: String
    var comments: [Comment]
+   var image: RedditImage? = nil
 
    init(user: User, title: String, entryDate: Date, id: String) {
       self.user = user

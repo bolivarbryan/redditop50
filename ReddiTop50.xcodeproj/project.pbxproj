@@ -20,6 +20,7 @@
 		F432F52B1F5B44470091D5D1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432F52A1F5B44470091D5D1 /* Constants.swift */; };
 		F48F5C891F5B539300C8E304 /* PostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F5C881F5B539300C8E304 /* PostTests.swift */; };
 		F48F5C8D1F5B554500C8E304 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F5C8C1F5B554500C8E304 /* Post.swift */; };
+		F48F5C8F1F5B63C500C8E304 /* RedditImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F5C8E1F5B63C500C8E304 /* RedditImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		F432F52A1F5B44470091D5D1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = App/Constants.swift; sourceTree = "<group>"; };
 		F48F5C881F5B539300C8E304 /* PostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostTests.swift; path = Post/Models/PostTests.swift; sourceTree = "<group>"; };
 		F48F5C8C1F5B554500C8E304 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Features/Post/Models/Post.swift; sourceTree = "<group>"; };
+		F48F5C8E1F5B63C500C8E304 /* RedditImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RedditImage.swift; path = Features/Post/Models/RedditImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				F48F5C8C1F5B554500C8E304 /* Post.swift */,
+				F48F5C8E1F5B63C500C8E304 /* RedditImage.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				F432F52B1F5B44470091D5D1 /* Constants.swift in Sources */,
 				F4319E971F5B4AD20012EDDB /* Comment.swift in Sources */,
 				F432F5281F5B42640091D5D1 /* User.swift in Sources */,
+				F48F5C8F1F5B63C500C8E304 /* RedditImage.swift in Sources */,
 				F432F5041F5B406D0091D5D1 /* ReddiTop50.xcdatamodeld in Sources */,
 				F432F4FE1F5B406D0091D5D1 /* ViewController.swift in Sources */,
 				F48F5C8D1F5B554500C8E304 /* Post.swift in Sources */,
