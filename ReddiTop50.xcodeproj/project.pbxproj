@@ -18,6 +18,8 @@
 		F432F5211F5B40DA0091D5D1 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432F5201F5B40DA0091D5D1 /* UserTests.swift */; };
 		F432F5281F5B42640091D5D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432F5271F5B42640091D5D1 /* User.swift */; };
 		F432F52B1F5B44470091D5D1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432F52A1F5B44470091D5D1 /* Constants.swift */; };
+		F48F5C891F5B539300C8E304 /* PostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F5C881F5B539300C8E304 /* PostTests.swift */; };
+		F48F5C8D1F5B554500C8E304 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F5C8C1F5B554500C8E304 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		F432F5201F5B40DA0091D5D1 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTests.swift; path = User/UserTests.swift; sourceTree = "<group>"; };
 		F432F5271F5B42640091D5D1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Features/User/Models/User.swift; sourceTree = "<group>"; };
 		F432F52A1F5B44470091D5D1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = App/Constants.swift; sourceTree = "<group>"; };
+		F48F5C881F5B539300C8E304 /* PostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostTests.swift; path = Post/Models/PostTests.swift; sourceTree = "<group>"; };
+		F48F5C8C1F5B554500C8E304 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Features/Post/Models/Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 		F432F5121F5B406D0091D5D1 /* ReddiTop50Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F48F5C851F5B535A00C8E304 /* Post */,
 				F4319E8F1F5B497E0012EDDB /* Comment */,
 				F432F51F1F5B40B10091D5D1 /* User */,
 				F432F5151F5B406D0091D5D1 /* Info.plist */,
@@ -145,6 +150,7 @@
 		F432F5221F5B42220091D5D1 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F48F5C8A1F5B551900C8E304 /* Post */,
 				F4319E921F5B4A990012EDDB /* Comment */,
 				F432F5231F5B422A0091D5D1 /* User */,
 			);
@@ -173,6 +179,30 @@
 				F432F52A1F5B44470091D5D1 /* Constants.swift */,
 			);
 			name = App;
+			sourceTree = "<group>";
+		};
+		F48F5C851F5B535A00C8E304 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				F48F5C881F5B539300C8E304 /* PostTests.swift */,
+			);
+			name = Post;
+			sourceTree = "<group>";
+		};
+		F48F5C8A1F5B551900C8E304 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				F48F5C8B1F5B552400C8E304 /* Models */,
+			);
+			name = Post;
+			sourceTree = "<group>";
+		};
+		F48F5C8B1F5B552400C8E304 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F48F5C8C1F5B554500C8E304 /* Post.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +315,7 @@
 				F432F5281F5B42640091D5D1 /* User.swift in Sources */,
 				F432F5041F5B406D0091D5D1 /* ReddiTop50.xcdatamodeld in Sources */,
 				F432F4FE1F5B406D0091D5D1 /* ViewController.swift in Sources */,
+				F48F5C8D1F5B554500C8E304 /* Post.swift in Sources */,
 				F432F4FC1F5B406D0091D5D1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +326,7 @@
 			files = (
 				F432F5211F5B40DA0091D5D1 /* UserTests.swift in Sources */,
 				F4319E911F5B499B0012EDDB /* CommentTests.swift in Sources */,
+				F48F5C891F5B539300C8E304 /* PostTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
