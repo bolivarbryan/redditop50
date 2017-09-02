@@ -31,3 +31,10 @@ extension User {
       return URL(string: "\(Constants.Endpoints.base)user/\(name)/")
    }
 }
+
+
+extension User: Equatable {
+   static func == (lhs: User, rhs: User) -> Bool {
+      return lhs.name == rhs.name
+   }
+}

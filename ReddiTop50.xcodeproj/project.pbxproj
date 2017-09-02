@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4319E911F5B499B0012EDDB /* CommentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4319E901F5B499B0012EDDB /* CommentTests.swift */; };
+		F4319E971F5B4AD20012EDDB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4319E961F5B4AD20012EDDB /* Comment.swift */; };
 		F432F4FC1F5B406D0091D5D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432F4FB1F5B406D0091D5D1 /* AppDelegate.swift */; };
 		F432F4FE1F5B406D0091D5D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432F4FD1F5B406D0091D5D1 /* ViewController.swift */; };
 		F432F5011F5B406D0091D5D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F432F4FF1F5B406D0091D5D1 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F4319E901F5B499B0012EDDB /* CommentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentTests.swift; path = Comment/CommentTests.swift; sourceTree = "<group>"; };
+		F4319E961F5B4AD20012EDDB /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Features/Comment/Models/Comment.swift; sourceTree = "<group>"; };
 		F432F4F81F5B406D0091D5D1 /* ReddiTop50.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReddiTop50.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F432F4FB1F5B406D0091D5D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F432F4FD1F5B406D0091D5D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +66,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4319E8F1F5B497E0012EDDB /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				F4319E901F5B499B0012EDDB /* CommentTests.swift */,
+			);
+			name = Comment;
+			sourceTree = "<group>";
+		};
+		F4319E921F5B4A990012EDDB /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				F4319E931F5B4A9E0012EDDB /* Models */,
+			);
+			name = Comment;
+			sourceTree = "<group>";
+		};
+		F4319E931F5B4A9E0012EDDB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4319E961F5B4AD20012EDDB /* Comment.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		F432F4EF1F5B406C0091D5D1 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +127,7 @@
 		F432F5121F5B406D0091D5D1 /* ReddiTop50Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F4319E8F1F5B497E0012EDDB /* Comment */,
 				F432F51F1F5B40B10091D5D1 /* User */,
 				F432F5151F5B406D0091D5D1 /* Info.plist */,
 			);
@@ -116,6 +145,7 @@
 		F432F5221F5B42220091D5D1 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F4319E921F5B4A990012EDDB /* Comment */,
 				F432F5231F5B422A0091D5D1 /* User */,
 			);
 			name = Features;
@@ -251,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F432F52B1F5B44470091D5D1 /* Constants.swift in Sources */,
+				F4319E971F5B4AD20012EDDB /* Comment.swift in Sources */,
 				F432F5281F5B42640091D5D1 /* User.swift in Sources */,
 				F432F5041F5B406D0091D5D1 /* ReddiTop50.xcdatamodeld in Sources */,
 				F432F4FE1F5B406D0091D5D1 /* ViewController.swift in Sources */,
@@ -263,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F432F5211F5B40DA0091D5D1 /* UserTests.swift in Sources */,
+				F4319E911F5B499B0012EDDB /* CommentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +496,7 @@
 				F432F51A1F5B406D0091D5D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F432F51B1F5B406D0091D5D1 /* Build configuration list for PBXNativeTarget "ReddiTop50Tests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +505,7 @@
 				F432F51D1F5B406D0091D5D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

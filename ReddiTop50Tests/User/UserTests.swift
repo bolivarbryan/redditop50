@@ -19,7 +19,7 @@ class UserTests: XCTestCase {
         super.tearDown()
     }
 
-   func testUserInit_ShouldHaveAName() {
+   func testInit_ShouldHaveAName() {
       // given
       let name = "jugodu"
 
@@ -31,7 +31,7 @@ class UserTests: XCTestCase {
 
    }
 
-   func testUserShouldHaveALinkInReddit() {
+   func testShouldHaveALinkInReddit() {
       // given
       let name = "jugodu"
 
