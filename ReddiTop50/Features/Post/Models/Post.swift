@@ -16,6 +16,7 @@ class Post {
    var comments: [Comment]
    var image: RedditImage? = nil
    var numberOfComments: Int = 0
+   var thumbnail: URL? = nil
 
    init(user: User, title: String, entryDate: Date, id: String) {
       self.user = user
