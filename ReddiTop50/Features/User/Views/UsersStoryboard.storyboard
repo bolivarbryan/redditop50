@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WNv-Q2-oNd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Profile View Controller-->
+        <scene sceneID="07f-VM-QJJ">
+            <objects>
+                <viewController storyboardIdentifier="UserProfileViewController" id="WNv-Q2-oNd" customClass="UserProfileViewController" customModule="ReddiTop50" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L4M-1W-Tlp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W3J-2Q-gC0">
+                                <rect key="frame" x="157.5" y="80" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="f7d-7x-URc"/>
+                                    <constraint firstAttribute="height" constant="60" id="feh-Mx-Kql"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Karma posts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wC9-5T-sMC">
+                                <rect key="frame" x="10" y="150" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 karma comments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzu-Ki-3Df">
+                                <rect key="frame" x="10" y="181" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQY-2d-OiW">
+                                <rect key="frame" x="10" y="212" width="355" height="30"/>
+                                <state key="normal" title="Open profile in Reddit.com"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6l5-6M-Ln7" firstAttribute="trailing" secondItem="dQY-2d-OiW" secondAttribute="trailing" constant="10" id="ArB-6k-6gV"/>
+                            <constraint firstItem="W3J-2Q-gC0" firstAttribute="top" secondItem="6l5-6M-Ln7" secondAttribute="top" constant="60" id="HCL-Yl-kfv"/>
+                            <constraint firstItem="W3J-2Q-gC0" firstAttribute="centerX" secondItem="L4M-1W-Tlp" secondAttribute="centerX" id="Lbi-9Q-zzG"/>
+                            <constraint firstItem="pzu-Ki-3Df" firstAttribute="top" secondItem="wC9-5T-sMC" secondAttribute="bottom" constant="10" id="OAp-NT-w0x"/>
+                            <constraint firstItem="wC9-5T-sMC" firstAttribute="top" secondItem="W3J-2Q-gC0" secondAttribute="bottom" constant="10" id="X3c-tp-xGc"/>
+                            <constraint firstItem="6l5-6M-Ln7" firstAttribute="trailing" secondItem="wC9-5T-sMC" secondAttribute="trailing" constant="10" id="kaA-qd-gnh"/>
+                            <constraint firstItem="pzu-Ki-3Df" firstAttribute="leading" secondItem="6l5-6M-Ln7" secondAttribute="leading" constant="10" id="oAV-Im-67T"/>
+                            <constraint firstItem="wC9-5T-sMC" firstAttribute="leading" secondItem="6l5-6M-Ln7" secondAttribute="leading" constant="10" id="oQX-rb-9Ch"/>
+                            <constraint firstItem="6l5-6M-Ln7" firstAttribute="trailing" secondItem="pzu-Ki-3Df" secondAttribute="trailing" constant="10" id="pZ3-Co-nhw"/>
+                            <constraint firstItem="dQY-2d-OiW" firstAttribute="leading" secondItem="6l5-6M-Ln7" secondAttribute="leading" constant="10" id="uHr-ba-3aj"/>
+                            <constraint firstItem="dQY-2d-OiW" firstAttribute="top" secondItem="pzu-Ki-3Df" secondAttribute="bottom" constant="10" id="xwY-Gb-BvD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6l5-6M-Ln7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PX7-Gd-6mj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122.40000000000001" y="84.107946026986511"/>
+        </scene>
+    </scenes>
+</document>

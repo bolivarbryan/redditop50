@@ -9,7 +9,8 @@
 import UIKit
 
 protocol PostTableViewCellDelegate: class {
-   func willShowComments(viewModel: PostViewModel)
+   func willShowCommentsFromPost(viewModel: PostViewModel)
+   func willShowAuthorProfileFromPost(viewModel: PostViewModel)
 }
 
 class PostTableViewCell: UITableViewCell {
@@ -23,8 +24,7 @@ class PostTableViewCell: UITableViewCell {
    var cellType: CellType = .simple
    var delegate: PostTableViewCellDelegate?
 
-   @IBOutlet fileprivate weak var authorLabel: UILabel!
-   @IBOutlet fileprivate weak var timeAgoLabel: UILabel?
+   @IBOutlet weak var authorButton: UIButton!
    @IBOutlet fileprivate weak var titleLabel: UILabel?
    @IBOutlet fileprivate weak var commentsButton: UIButton!
    @IBOutlet fileprivate weak var thumbnailWidthConstraint: NSLayoutConstraint?
@@ -40,9 +40,8 @@ class PostTableViewCell: UITableViewCell {
       super.setSelected(selected, animated: animated)
    }
 
-   func setupCell() {
-      authorLabel.text = viewModel.authorNameString
-      timeAgoLabel?.text = viewModel.timeAgo
+   func setup() {
+      authorButton.setTitle("\(viewModel.authorNameString) • \(viewModel.timeAgo)", for: .normal)
       titleLabel?.text = viewModel.title
       switch viewModel.postType {
       case .simple:
@@ -51,7 +50,6 @@ class PostTableViewCell: UITableViewCell {
       case .image:
          thumbnailWidthConstraint?.constant = 0
          thumbnailTrailingConstraint?.constant = 0
-          authorLabel.text = viewModel.authorNameString + " • " + viewModel.timeAgo
       case .thumbnailed:
          thumbnailWidthConstraint?.constant = 60
          thumbnailTrailingConstraint?.constant = 10
@@ -59,7 +57,11 @@ class PostTableViewCell: UITableViewCell {
       layoutIfNeeded()
    }
 
+   @IBAction func showProfile(_ sender: Any) {
+      delegate?.willShowAuthorProfileFromPost(viewModel: viewModel)
+   }
+
    @IBAction func showComments(_ sender: Any) {
-      delegate?.willShowComments(viewModel: viewModel)
+      delegate?.willShowCommentsFromPost(viewModel: viewModel)
    }
 }

@@ -20,7 +20,7 @@ class PostListViewModel {
 
       //TODO: get data from api
       let user = User(name: "bryan")
-      let post = Post(user: user, title: "hola mundo", entryDate: Date(), id: "abc")
+      let post = Post(user: user, title: "Let's talk about the networking layer of the Swift talk app. We think it's an interesting example to look at because we designed it differently than in previous Objective-C projects. Typically, we would have created some kind of a Webservice class with individual methods that perform calls to particular endpoints. These methods return the data that we get back from these endpoints via a callback. For example, we could have a loadEpisodes method, which makes the network call, parses the result, instantiates some Episode objects, and returns an array with the episodes. We could also have a similar loadMedia method, which goes through the same steps to load the media for a particular episode", entryDate: Date(), id: "abc")
       let post2 = Post(user: user, title: "Paul and I can’t believe how quickly the week went by. It was so great to see you. Come visit us again soon and let us know how it goes…", entryDate: Date(), id: "abc")
       let post3 = Post(user: user, title: "This is a post with a thumbnail, please pay attention. This is a post with a thumbnail, repeat... chango down", entryDate: Date(), id: "abc")
       let d = Date(timeIntervalSince1970: 1)

@@ -64,7 +64,7 @@ extension PostListViewController: UITableViewDataSource {
       let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PostTableViewCell
       cell.viewModel = postViewModel
       cell.delegate = self
-      cell.setupCell()
+      cell.setup()
       return cell
    }
 }
@@ -90,9 +90,14 @@ extension PostListViewController: UITableViewDelegate {
 }
 
 extension PostListViewController: PostTableViewCellDelegate {
-   func willShowComments(viewModel: PostViewModel) {
+   func willShowCommentsFromPost(viewModel: PostViewModel){
       selectedPost = viewModel
       performSegue(withIdentifier: SegueIdentifier.comment.rawValue, sender: self)
+   }
+
+   func willShowAuthorProfileFromPost(viewModel: PostViewModel) {
+      selectedPost = viewModel
+      performSegue(withIdentifier: SegueIdentifier.profile.rawValue, sender: self)
    }
 }
 

@@ -7,30 +7,20 @@
 //
 
 import UIKit
-import WebKit
 
 class PostWebViewController: UIViewController {
-   var webView: WKWebView!
+   @IBOutlet weak var webView: UIWebView?
 
    override func didReceiveMemoryWarning() {
       super.didReceiveMemoryWarning()
    }
 
-   override func loadView() {
-      let webConfiguration = WKWebViewConfiguration()
-      webView = WKWebView(frame: .zero, configuration: webConfiguration)
-      webView.uiDelegate = self
-      view = webView
-   }
    override func viewDidLoad() {
       super.viewDidLoad()
-
-      let myURL = URL(string: "https://www.apple.com")
-      let myRequest = URLRequest(url: myURL!)
-      webView.load(myRequest)
+      if let url = URL(string: "http://apple.com") {
+         let request = URLRequest(url: url)
+         webView?.loadRequest(request)
+      }
    }
    
-}
-extension PostWebViewController: WKUIDelegate {
-
 }

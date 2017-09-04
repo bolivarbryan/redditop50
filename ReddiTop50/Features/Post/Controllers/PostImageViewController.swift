@@ -14,7 +14,7 @@ class PostImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      guard let image = viewModel?.image else {
+      guard let _ = viewModel?.image else {
          return
       }
 
