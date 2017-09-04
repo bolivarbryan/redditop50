@@ -53,7 +53,8 @@ class PostListViewController: UIViewController {
          let vc = segue.destination as! PostImageViewController
          vc.viewModel = selectedPost
       case .web:
-         break
+         let vc = segue.destination as! PostWebViewController
+         vc.url = selectedPost?.url
       case .profile:
       break
       }

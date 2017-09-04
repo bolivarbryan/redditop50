@@ -43,6 +43,7 @@ class PostTableViewCell: UITableViewCell {
    func setup() {
       authorButton.setTitle("\(viewModel.authorNameString) • \(viewModel.timeAgo)", for: .normal)
       titleLabel?.text = viewModel.title
+      commentsButton.setTitle(viewModel.numberOfCommentsString, for: .normal)
       switch viewModel.postType {
       case .simple:
          thumbnailWidthConstraint?.constant = 0

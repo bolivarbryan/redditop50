@@ -10,6 +10,7 @@ import UIKit
 
 class PostWebViewController: UIViewController {
    @IBOutlet weak var webView: UIWebView?
+   var url: URL?
 
    override func didReceiveMemoryWarning() {
       super.didReceiveMemoryWarning()
@@ -17,7 +18,7 @@ class PostWebViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()
-      if let url = URL(string: "http://apple.com") {
+      if let url = url {
          let request = URLRequest(url: url)
          webView?.loadRequest(request)
       }

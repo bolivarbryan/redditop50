@@ -52,9 +52,15 @@ class PostViewModel: Equatable {
 
    var postType: PostType {
       if post.image != nil {
+
          if post.isExternal {
             return .thumbnailed
          }
+
+         if let url = post.url, url.pathExtension == "gif" {
+            return .thumbnailed
+         }
+
          return .image
       }
 
@@ -86,7 +92,7 @@ class PostViewModel: Equatable {
    }
 
    var numberOfCommentsString: String {
-      return "\(post.numberOfComments)"
+      return "\(post.numberOfComments) Comments"
    }
 
    var authorNameString: String {
@@ -99,6 +105,10 @@ class PostViewModel: Equatable {
 
    var title: String {
       return post.title
+   }
+
+   var url: URL? {
+      return post.url
    }
 
    static func == (lhs: PostViewModel, rhs: PostViewModel) -> Bool {

@@ -18,6 +18,7 @@ struct Post {
    var numberOfComments: Int = 0
    var thumbnail: URL? = nil
    var isExternal: Bool = false
+   var url: URL? = nil
 
    init(user: User, title: String, entryDate: Date, id: String) {
       self.user = user
@@ -43,6 +44,14 @@ struct Post {
 
       if let postHint = data["post_hint"] as? String {
          self.isExternal = postHint != "image"
+      }
+
+      if let urlString = data["url"] as? String, let url = URL(string:urlString) {
+         self.url = url
+      }
+
+      if let numOfComments = data["num_comments"] as? Int{
+         self.numberOfComments = numOfComments
       }
 
       guard let preview = data["preview"] as? JSONDictionary,
