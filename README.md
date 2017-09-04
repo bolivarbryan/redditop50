@@ -87,17 +87,17 @@ Number of comments  | String	| Number of comments
 
 Subtask   												| Conditions 											| Status
 -------- 													| ---  														| ------
-Fetch data from server							|																| [Pending]
+Fetch data from server							|																| [Completed]
 Save Fetched data in local database		|																| [Pending]
 Offline use												| Loads previous records from server		| [Pending]									
-Use of tableview for listing posts			|																| [Pending]
+Use of tableview for listing posts			|																| [Completed]
 Add Pagination in TableView					|																| [Pending]
-Add cell for text only posts						| Only text												| [Pending]
-Add cell for link posts								| Text + thumbnail									| [Pending]
-Add cell for image posts							| Text + image											| [Pending]
+Add cell for text only posts						| Only text												| [Completed]
+Add cell for link posts								| Text + thumbnail									| [Completed]
+Add cell for image posts							| Text + image											| [Completed]
 Add empty state										|																| [Pending]
-Open options for tapping image				| Watch fullscreen, Save Picture				| [Pending]
-Open Url after tapping thumbnail			| Open safari											| [Pending]
+Open options for tapping image				| Watch fullscreen, Save Picture				| [Completed]
+Open Url after tapping thumbnail			| Open safari											| [Completed]
 
 
 
@@ -105,22 +105,15 @@ Open Url after tapping thumbnail			| Open safari											| [Pending]
 
 Subtask   																	| Conditions 			| Status
 -------- 																		| -------------  			| ------
-List post’s comments in a tableview							|								| [Pending]
+List post’s comments in a tableview							|								| [Completed]
 Link to Same comments view if it has subcomments	|								| [Pending]
-Link to user profile after tapping username				| 								| [Pending]					
+Link to user profile after tapping username				| 								| [Completed]					
 
 
 - **As a user I want to be able to see a user's profile**
 
 Subtask   												| Conditions 			| Status
 -------- 													| -------------  			| ------
-Show karma count for comment				|								| [Pending]
-Show karma count for links						|								| [Pending]
-Show link for user profile in safari			| Tappable				| [Pending]	
-
-
-----------
-
-
-	**Views**
-=======
+Show karma count for comment				|								| [Completed]
+Show karma count for links						|								| [Completed]
+Show link for user profile in safari			| Tappable				| [Completed]	
