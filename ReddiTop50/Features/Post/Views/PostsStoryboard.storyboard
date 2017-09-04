@@ -220,13 +220,26 @@
                                     <action selector="goBack:" destination="H5f-Z7-3tD" eventType="touchUpInside" id="QHt-uX-HXd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iot-8a-Ddu">
+                                <rect key="frame" x="240" y="40" width="125" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="Gci-gY-QOG"/>
+                                    <constraint firstAttribute="height" constant="44" id="ewC-Am-6fF"/>
+                                </constraints>
+                                <state key="normal" title="Save Image"/>
+                                <connections>
+                                    <action selector="savetoCameraRoll:" destination="H5f-Z7-3tD" eventType="touchUpInside" id="I0R-OM-8bJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hTy-Rf-IXj" firstAttribute="top" secondItem="Pbb-9s-i64" secondAttribute="top" constant="20" id="0jS-FE-tYR"/>
                             <constraint firstItem="zGI-W5-Fha" firstAttribute="centerY" secondItem="Ztg-ja-YQp" secondAttribute="centerY" id="G4M-Kf-1L0"/>
+                            <constraint firstItem="Pbb-9s-i64" firstAttribute="trailing" secondItem="iot-8a-Ddu" secondAttribute="trailing" constant="10" id="RZN-CQ-O83"/>
                             <constraint firstItem="hTy-Rf-IXj" firstAttribute="leading" secondItem="Pbb-9s-i64" secondAttribute="leading" constant="10" id="WPs-gX-CUu"/>
                             <constraint firstItem="zGI-W5-Fha" firstAttribute="width" secondItem="Ztg-ja-YQp" secondAttribute="width" id="YBE-bt-Dwa"/>
+                            <constraint firstItem="iot-8a-Ddu" firstAttribute="top" secondItem="Pbb-9s-i64" secondAttribute="top" constant="20" id="eRl-5W-AbK"/>
                             <constraint firstItem="zGI-W5-Fha" firstAttribute="centerX" secondItem="Ztg-ja-YQp" secondAttribute="centerX" id="ws2-q2-sCv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pbb-9s-i64"/>

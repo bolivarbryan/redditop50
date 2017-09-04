@@ -39,5 +39,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Save Images that you like</string>
 </dict>
 </plist>

@@ -30,4 +30,12 @@ class PostImageViewController: UIViewController {
       self.dismiss(animated: true, completion: nil)
    }
 
+   @IBAction func savetoCameraRoll(_ sender: Any) {
+      guard let image = imageView.image else { return }
+      UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+      let alertController = UIAlertController(title: "Success", message: "Image saved!", preferredStyle: .alert)
+      let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+      alertController.addAction(action)
+      self.present(alertController, animated: true, completion: nil)
+   }
 }

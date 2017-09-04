@@ -11,7 +11,7 @@ import Foundation
 struct Post {
    let user: User
    var title: String
-   let entryDate: Date
+   var entryDate: Date
    var id: String
    var comments: [Comment]
    var image: RedditImage? = nil
@@ -39,7 +39,6 @@ struct Post {
       self.title = title
       self.user = User(name: user)
       self.title = title
-      self.entryDate = Date()
       self.comments = []
 
       if let postHint = data["post_hint"] as? String {
@@ -52,6 +51,12 @@ struct Post {
 
       if let numOfComments = data["num_comments"] as? Int{
          self.numberOfComments = numOfComments
+      }
+
+      if let created = data["created_utc"] as? Double {
+         self.entryDate = Date(timeIntervalSince1970: created)
+      } else {
+         self.entryDate = Date()
       }
 
       guard let preview = data["preview"] as? JSONDictionary,
