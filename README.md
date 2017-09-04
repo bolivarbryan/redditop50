@@ -2,14 +2,14 @@
 ===================
 
 > **Guidelines**
->  - Use UITableView to arrange the data.
->  - Use NSURLSession
->  - Landscape Support
->  - Use of Storyboards
->  - Pagination support
->  - Saving pictures in the picture gallery
->  - App state-preservation/restoration
->  - Support iPhone 6/ 6+ screen size
+- [x] Use UITableView to arrange the data.
+- [x] Use NSURLSession
+- [x] Landscape Support
+- [x] Use of Storyboards
+- [ ] Pagination support
+- [x] Saving pictures in the picture gallery
+- [ ] App state-preservation/restoration
+- [x] Support iPhone 6/ 6+ screen size
 
 
 ----------
