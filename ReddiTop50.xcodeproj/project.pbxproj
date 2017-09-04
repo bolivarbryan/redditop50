@@ -26,6 +26,7 @@
 		F45032C81F5D275000D88EA3 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45032C71F5D275000D88EA3 /* WebService.swift */; };
 		F46562931F5C975200FF9BDD /* PostImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46562921F5C975200FF9BDD /* PostImageViewController.swift */; };
 		F46562951F5C976600FF9BDD /* PostWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46562941F5C976600FF9BDD /* PostWebViewController.swift */; };
+		F486CBDE1F5D3D6900B8FB33 /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486CBDD1F5D3D6900B8FB33 /* UIImageView+URL.swift */; };
 		F48F5C8D1F5B554500C8E304 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F5C8C1F5B554500C8E304 /* Post.swift */; };
 		F48F5C8F1F5B63C500C8E304 /* RedditImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F5C8E1F5B63C500C8E304 /* RedditImage.swift */; };
 		F494C5BF1F5B6C1300A7A799 /* CommentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494C5BD1F5B6AE600A7A799 /* CommentTests.swift */; };
@@ -68,6 +69,7 @@
 		F45032C71F5D275000D88EA3 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = Common/Networking/WebService.swift; sourceTree = "<group>"; };
 		F46562921F5C975200FF9BDD /* PostImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostImageViewController.swift; path = Features/Post/Controllers/PostImageViewController.swift; sourceTree = "<group>"; };
 		F46562941F5C976600FF9BDD /* PostWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostWebViewController.swift; path = Features/Post/Controllers/PostWebViewController.swift; sourceTree = "<group>"; };
+		F486CBDD1F5D3D6900B8FB33 /* UIImageView+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
 		F48F5C8C1F5B554500C8E304 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Features/Post/Models/Post.swift; sourceTree = "<group>"; };
 		F48F5C8E1F5B63C500C8E304 /* RedditImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RedditImage.swift; path = Features/Post/Models/RedditImage.swift; sourceTree = "<group>"; };
 		F494C5BC1F5B6AE600A7A799 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		F432F4FA1F5B406D0091D5D1 /* ReddiTop50 */ = {
 			isa = PBXGroup;
 			children = (
+				F486CBDC1F5D3D5400B8FB33 /* Extensions */,
 				F45032C51F5D26F700D88EA3 /* Common */,
 				F432F5291F5B44300091D5D1 /* App */,
 				F432F5221F5B42220091D5D1 /* Features */,
@@ -259,6 +262,14 @@
 				F45032C71F5D275000D88EA3 /* WebService.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		F486CBDC1F5D3D5400B8FB33 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F486CBDD1F5D3D6900B8FB33 /* UIImageView+URL.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		F48F5C8A1F5B551900C8E304 /* Post */ = {
@@ -410,6 +421,7 @@
 				F45032BF1F5D0EC900D88EA3 /* UserProfileViewController.swift in Sources */,
 				F432F5041F5B406D0091D5D1 /* ReddiTop50.xcdatamodeld in Sources */,
 				F48F5C8D1F5B554500C8E304 /* Post.swift in Sources */,
+				F486CBDE1F5D3D6900B8FB33 /* UIImageView+URL.swift in Sources */,
 				F432F4FC1F5B406D0091D5D1 /* AppDelegate.swift in Sources */,
 				F46562931F5C975200FF9BDD /* PostImageViewController.swift in Sources */,
 				F41252811F5B7BBB00FB3138 /* PostTableViewCell.swift in Sources */,

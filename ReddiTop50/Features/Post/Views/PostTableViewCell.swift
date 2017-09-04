@@ -50,9 +50,11 @@ class PostTableViewCell: UITableViewCell {
       case .image:
          thumbnailWidthConstraint?.constant = 0
          thumbnailTrailingConstraint?.constant = 0
+         viewModel.image?.getImage(url: viewModel.thumbnailString!, imageView: self.postImageView)
       case .thumbnailed:
          thumbnailWidthConstraint?.constant = 60
          thumbnailTrailingConstraint?.constant = 10
+         viewModel.image?.getImage(url: viewModel.thumbnailString!, imageView: self.thumbnailImageView!)
       }
       layoutIfNeeded()
    }

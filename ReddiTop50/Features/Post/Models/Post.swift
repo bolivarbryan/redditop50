@@ -17,6 +17,7 @@ struct Post {
    var image: RedditImage? = nil
    var numberOfComments: Int = 0
    var thumbnail: URL? = nil
+   var isExternal: Bool = false
 
    init(user: User, title: String, entryDate: Date, id: String) {
       self.user = user
@@ -39,6 +40,25 @@ struct Post {
       self.title = title
       self.entryDate = Date()
       self.comments = []
+
+      if let postHint = data["post_hint"] as? String {
+         self.isExternal = postHint != "image"
+      }
+
+      guard let preview = data["preview"] as? JSONDictionary,
+            let images = preview["images"] as? [JSONDictionary] else {
+               return
+      }
+
+      if images.count > 0 {
+         let image = RedditImage(dictionary: images.first!)
+         self.image = image
+      }
+
+      guard let thumbnailString = data["thumbnail"] as? String, let thumbnail = URL(string: thumbnailString) else {
+         return
+      }
+      self.thumbnail = thumbnail
    }
 }
 

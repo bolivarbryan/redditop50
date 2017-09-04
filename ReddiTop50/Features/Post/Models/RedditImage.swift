@@ -20,7 +20,6 @@ class RedditImage {
             return urlObject
          }
       }
-
       return nil
    }
 
@@ -33,6 +32,35 @@ class RedditImage {
       self.height = height
       self.width = width
    }
+
+   init?(dictionary: JSONDictionary) {
+      guard let source = dictionary["source"] as? JSONDictionary,
+            let url = source["url"] as? String else { return nil }
+      self.urlString = url
+   }
+
+   var imageCache = [String:UIImage]()
+
+   func getImage(url: String, imageView: UIImageView) {
+      if let img = imageCache[url] {
+         imageView.image = img
+      } else {
+         let request: URLRequest = URLRequest(url: URL(string: url)!)
+
+         let mainQueue = OperationQueue.main
+
+         NSURLConnection.sendAsynchronousRequest(request, queue: mainQueue, completionHandler: { (response, data, error) -> Void in
+            if error == nil {
+               let image = UIImage(data: data!)
+               self.imageCache[url] = image
+
+               DispatchQueue.main.async {
+                  imageView.image = image
+               }
+            }
+         })
+      }
+   }
 }
 
 extension RedditImage: Equatable {
@@ -40,5 +68,3 @@ extension RedditImage: Equatable {
       return lhs.url == rhs.url
    }
 }
-
-

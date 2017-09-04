@@ -6,7 +6,7 @@
 //  Copyright © 2017 bolivarbryan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class PostListViewModel {
    fileprivate var posts: [Post]
@@ -31,8 +31,8 @@ class PostListViewModel {
    }
 
    static let all = Resource<[Post]>(url: URL(string:Constants.Endpoints.top50Posts)! , parseJSON: { json in
-      let json2 = ((json as? JSONDictionary)!["data"] as? JSONDictionary)!["children"]
-      guard let dictionaries = json2 as? [JSONDictionary] else { return nil }
+      let children = ((json as? JSONDictionary)!["data"] as? JSONDictionary)!["children"]
+      guard let dictionaries = children as? [JSONDictionary] else { return nil }
       return dictionaries.flatMap(Post.init)
    })
 }
@@ -52,6 +52,9 @@ class PostViewModel: Equatable {
 
    var postType: PostType {
       if post.image != nil {
+         if post.isExternal {
+            return .thumbnailed
+         }
          return .image
       }
 
@@ -64,6 +67,22 @@ class PostViewModel: Equatable {
 
    var image: RedditImage? {
       return post.image
+   }
+
+   func getImage(completion: @escaping (UIImage?) -> () ){
+      guard let url = post.image?.url else { return }
+
+      DispatchQueue.global().async {
+         if let data = try? Data(contentsOf: url) {
+            DispatchQueue.main.async {
+               completion(UIImage(data: data))
+            }
+         }
+      }
+   }
+
+   var thumbnailString: String? {
+      return post.thumbnail?.absoluteString
    }
 
    var numberOfCommentsString: String {
@@ -81,8 +100,6 @@ class PostViewModel: Equatable {
    var title: String {
       return post.title
    }
-   
-
 
    static func == (lhs: PostViewModel, rhs: PostViewModel) -> Bool {
       return lhs.post == rhs.post
