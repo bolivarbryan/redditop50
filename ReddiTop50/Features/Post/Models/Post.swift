@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Post {
+struct Post {
    let user: User
-   let title: String
+   var title: String
    let entryDate: Date
    var id: String
    var comments: [Comment]
@@ -23,6 +23,21 @@ class Post {
       self.title = title
       self.entryDate = entryDate
       self.id = id
+      self.comments = []
+   }
+
+   init?(dictionary: JSONDictionary) {
+      guard let data = dictionary["data"] as? JSONDictionary,
+         let id = data["id"] as? String,
+         let title = data["title"] as? String,
+         let user = data["author"] as? String
+         else { return nil }
+
+      self.id = id
+      self.title = title
+      self.user = User(name: user)
+      self.title = title
+      self.entryDate = Date()
       self.comments = []
    }
 }

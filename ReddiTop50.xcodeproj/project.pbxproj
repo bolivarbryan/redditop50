@@ -23,6 +23,7 @@
 		F45032BF1F5D0EC900D88EA3 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45032BE1F5D0EC900D88EA3 /* UserProfileViewController.swift */; };
 		F45032C21F5D0EF200D88EA3 /* UsersStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45032C11F5D0EF200D88EA3 /* UsersStoryboard.storyboard */; };
 		F45032C41F5D168400D88EA3 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45032C31F5D168400D88EA3 /* CommentTableViewCell.swift */; };
+		F45032C81F5D275000D88EA3 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45032C71F5D275000D88EA3 /* WebService.swift */; };
 		F46562931F5C975200FF9BDD /* PostImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46562921F5C975200FF9BDD /* PostImageViewController.swift */; };
 		F46562951F5C976600FF9BDD /* PostWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46562941F5C976600FF9BDD /* PostWebViewController.swift */; };
 		F48F5C8D1F5B554500C8E304 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48F5C8C1F5B554500C8E304 /* Post.swift */; };
@@ -64,6 +65,7 @@
 		F45032BE1F5D0EC900D88EA3 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileViewController.swift; path = Features/User/Controllers/UserProfileViewController.swift; sourceTree = "<group>"; };
 		F45032C11F5D0EF200D88EA3 /* UsersStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = UsersStoryboard.storyboard; path = Features/User/Views/UsersStoryboard.storyboard; sourceTree = "<group>"; };
 		F45032C31F5D168400D88EA3 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommentTableViewCell.swift; path = Features/Comment/Views/CommentTableViewCell.swift; sourceTree = "<group>"; };
+		F45032C71F5D275000D88EA3 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = Common/Networking/WebService.swift; sourceTree = "<group>"; };
 		F46562921F5C975200FF9BDD /* PostImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostImageViewController.swift; path = Features/Post/Controllers/PostImageViewController.swift; sourceTree = "<group>"; };
 		F46562941F5C976600FF9BDD /* PostWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostWebViewController.swift; path = Features/Post/Controllers/PostWebViewController.swift; sourceTree = "<group>"; };
 		F48F5C8C1F5B554500C8E304 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Features/Post/Models/Post.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		F432F4FA1F5B406D0091D5D1 /* ReddiTop50 */ = {
 			isa = PBXGroup;
 			children = (
+				F45032C51F5D26F700D88EA3 /* Common */,
 				F432F5291F5B44300091D5D1 /* App */,
 				F432F5221F5B42220091D5D1 /* Features */,
 			);
@@ -240,6 +243,22 @@
 				F45032C11F5D0EF200D88EA3 /* UsersStoryboard.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		F45032C51F5D26F700D88EA3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F45032C61F5D270600D88EA3 /* Networking */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		F45032C61F5D270600D88EA3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F45032C71F5D275000D88EA3 /* WebService.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		F48F5C8A1F5B551900C8E304 /* Post */ = {
@@ -381,6 +400,7 @@
 				F412527D1F5B74AD00FB3138 /* PostListViewController.swift in Sources */,
 				F432F52B1F5B44470091D5D1 /* Constants.swift in Sources */,
 				F4319E971F5B4AD20012EDDB /* Comment.swift in Sources */,
+				F45032C81F5D275000D88EA3 /* WebService.swift in Sources */,
 				F494C5C41F5B6C3800A7A799 /* PostListViewModel.swift in Sources */,
 				F432F5281F5B42640091D5D1 /* User.swift in Sources */,
 				F45032C41F5D168400D88EA3 /* CommentTableViewCell.swift in Sources */,

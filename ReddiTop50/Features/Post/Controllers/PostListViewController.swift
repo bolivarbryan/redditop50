@@ -27,6 +27,12 @@ class PostListViewController: UIViewController {
       postListTableView.delegate = self
       postListTableView.dataSource = self
       postListTableView.estimatedRowHeight = 230
+
+      viewModel.loadPosts { (success) in
+         DispatchQueue.main.async {
+            self.postListTableView.reloadData()
+         }
+      }
    }
 
    override func didReceiveMemoryWarning() {

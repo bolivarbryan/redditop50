@@ -10,6 +10,8 @@ import Foundation
 
 struct Constants {
    struct Endpoints {
-         static let base = "https://www.reddit.com/"
+      static let base = "https://www.reddit.com/"
+      static let top50Posts: String = "https://www.reddit.com/top.json"
+      
    }
 }
