@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZYM-oJ-iw4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZYM-oJ-iw4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <development version="8000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +13,10 @@
         <scene sceneID="DFF-xV-49q">
             <objects>
                 <viewController storyboardIdentifier="CommentsViewController" title="Comments" id="ZYM-oJ-iw4" customClass="CommentsViewController" customModule="ReddiTop50" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Skf-6e-x3H"/>
+                        <viewControllerLayoutGuide type="bottom" id="fEL-bH-TaY"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vyw-ki-yJn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,12 +78,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KDq-Jn-yf1" firstAttribute="trailing" secondItem="kdK-Mh-eKG" secondAttribute="trailing" id="4KK-oy-Sba"/>
-                            <constraint firstItem="kdK-Mh-eKG" firstAttribute="leading" secondItem="KDq-Jn-yf1" secondAttribute="leading" id="4nN-5s-YiQ"/>
-                            <constraint firstItem="kdK-Mh-eKG" firstAttribute="top" secondItem="KDq-Jn-yf1" secondAttribute="top" id="R1o-31-tHE"/>
-                            <constraint firstItem="KDq-Jn-yf1" firstAttribute="bottom" secondItem="kdK-Mh-eKG" secondAttribute="bottom" id="vT7-Vp-WGj"/>
+                            <constraint firstAttribute="trailing" secondItem="kdK-Mh-eKG" secondAttribute="trailing" id="4KK-oy-Sba"/>
+                            <constraint firstItem="kdK-Mh-eKG" firstAttribute="leading" secondItem="vyw-ki-yJn" secondAttribute="leading" id="4nN-5s-YiQ"/>
+                            <constraint firstItem="kdK-Mh-eKG" firstAttribute="top" secondItem="Skf-6e-x3H" secondAttribute="bottom" id="R1o-31-tHE"/>
+                            <constraint firstItem="fEL-bH-TaY" firstAttribute="top" secondItem="kdK-Mh-eKG" secondAttribute="bottom" id="vT7-Vp-WGj"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="KDq-Jn-yf1"/>
                     </view>
                     <navigationItem key="navigationItem" id="3Fb-Mj-9Aw"/>
                     <connections>

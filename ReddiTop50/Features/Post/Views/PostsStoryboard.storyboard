@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tZe-N3-jKz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tZe-N3-jKz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <development version="8000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,6 +15,10 @@
         <scene sceneID="m1o-o9-hOn">
             <objects>
                 <viewController title="ReddiTop50" id="yYd-L2-Kz0" customClass="PostListViewController" customModule="ReddiTop50" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dKB-Zd-Wjb"/>
+                        <viewControllerLayoutGuide type="bottom" id="S8g-Oa-zN1"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="l5y-Ri-IaW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,11 +161,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="UCr-nU-3qC" secondAttribute="trailing" id="0Tq-Da-bsT"/>
-                            <constraint firstItem="pJt-V3-Lhg" firstAttribute="bottom" secondItem="UCr-nU-3qC" secondAttribute="bottom" id="Dqb-fK-gsf"/>
+                            <constraint firstItem="S8g-Oa-zN1" firstAttribute="top" secondItem="UCr-nU-3qC" secondAttribute="bottom" id="Dqb-fK-gsf"/>
                             <constraint firstItem="UCr-nU-3qC" firstAttribute="top" secondItem="l5y-Ri-IaW" secondAttribute="top" id="XiO-Zp-mJv"/>
-                            <constraint firstItem="UCr-nU-3qC" firstAttribute="leading" secondItem="pJt-V3-Lhg" secondAttribute="leading" id="YVg-lA-jWi"/>
+                            <constraint firstItem="UCr-nU-3qC" firstAttribute="leading" secondItem="l5y-Ri-IaW" secondAttribute="leading" id="YVg-lA-jWi"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="pJt-V3-Lhg"/>
                     </view>
                     <navigationItem key="navigationItem" title="ReddiTop50" id="sHP-Bs-meu"/>
                     <connections>
@@ -198,6 +201,10 @@
         <scene sceneID="RvI-Y0-Kvs">
             <objects>
                 <viewController id="H5f-Z7-3tD" customClass="PostImageViewController" customModule="ReddiTop50" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X3A-0P-YTn"/>
+                        <viewControllerLayoutGuide type="bottom" id="FXG-Lk-VTS"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ztg-ja-YQp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,15 +241,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hTy-Rf-IXj" firstAttribute="top" secondItem="Pbb-9s-i64" secondAttribute="top" constant="20" id="0jS-FE-tYR"/>
+                            <constraint firstItem="hTy-Rf-IXj" firstAttribute="top" secondItem="X3A-0P-YTn" secondAttribute="bottom" constant="20" id="0jS-FE-tYR"/>
                             <constraint firstItem="zGI-W5-Fha" firstAttribute="centerY" secondItem="Ztg-ja-YQp" secondAttribute="centerY" id="G4M-Kf-1L0"/>
-                            <constraint firstItem="Pbb-9s-i64" firstAttribute="trailing" secondItem="iot-8a-Ddu" secondAttribute="trailing" constant="10" id="RZN-CQ-O83"/>
-                            <constraint firstItem="hTy-Rf-IXj" firstAttribute="leading" secondItem="Pbb-9s-i64" secondAttribute="leading" constant="10" id="WPs-gX-CUu"/>
+                            <constraint firstAttribute="trailing" secondItem="iot-8a-Ddu" secondAttribute="trailing" constant="10" id="RZN-CQ-O83"/>
+                            <constraint firstItem="hTy-Rf-IXj" firstAttribute="leading" secondItem="Ztg-ja-YQp" secondAttribute="leading" constant="10" id="WPs-gX-CUu"/>
                             <constraint firstItem="zGI-W5-Fha" firstAttribute="width" secondItem="Ztg-ja-YQp" secondAttribute="width" id="YBE-bt-Dwa"/>
-                            <constraint firstItem="iot-8a-Ddu" firstAttribute="top" secondItem="Pbb-9s-i64" secondAttribute="top" constant="20" id="eRl-5W-AbK"/>
+                            <constraint firstItem="iot-8a-Ddu" firstAttribute="top" secondItem="X3A-0P-YTn" secondAttribute="bottom" constant="20" id="eRl-5W-AbK"/>
                             <constraint firstItem="zGI-W5-Fha" firstAttribute="centerX" secondItem="Ztg-ja-YQp" secondAttribute="centerX" id="ws2-q2-sCv"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Pbb-9s-i64"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="zGI-W5-Fha" id="WQ6-GY-qhg"/>
@@ -256,6 +262,10 @@
         <scene sceneID="lCQ-nL-FOV">
             <objects>
                 <viewController id="9w4-OF-unq" customClass="PostWebViewController" customModule="ReddiTop50" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kam-cG-RwZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="vsB-q2-BDb"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FaC-Ns-0kU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,12 +277,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6K2-yU-hBI" firstAttribute="bottom" secondItem="pfA-9s-m15" secondAttribute="bottom" id="HZD-re-qLJ"/>
+                            <constraint firstItem="vsB-q2-BDb" firstAttribute="top" secondItem="pfA-9s-m15" secondAttribute="bottom" id="HZD-re-qLJ"/>
                             <constraint firstItem="pfA-9s-m15" firstAttribute="leading" secondItem="FaC-Ns-0kU" secondAttribute="leading" id="fMH-Nx-3dI"/>
-                            <constraint firstItem="6K2-yU-hBI" firstAttribute="trailing" secondItem="pfA-9s-m15" secondAttribute="trailing" id="oXt-bN-NNN"/>
-                            <constraint firstItem="pfA-9s-m15" firstAttribute="top" secondItem="6K2-yU-hBI" secondAttribute="top" id="q3K-Go-ykk"/>
+                            <constraint firstAttribute="trailing" secondItem="pfA-9s-m15" secondAttribute="trailing" id="oXt-bN-NNN"/>
+                            <constraint firstItem="pfA-9s-m15" firstAttribute="top" secondItem="Kam-cG-RwZ" secondAttribute="bottom" id="q3K-Go-ykk"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6K2-yU-hBI"/>
                     </view>
                     <connections>
                         <outlet property="webView" destination="pfA-9s-m15" id="vmJ-qF-rmK"/>
